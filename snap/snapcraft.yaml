@@ -7,8 +7,6 @@ description: |
   Through a unique collectible card system, players can amplify 
   and augment a character’s core set of abilities to play exactly how they want to play.
 
-icon: meta/gui/paladins.png
-
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slotsrchitectures:
 
