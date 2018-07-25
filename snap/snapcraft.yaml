@@ -20,7 +20,7 @@ apps:
     environment: 
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
       DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
-      TRICKS: "vcrun2010 d3dx9_36 d3dx11_43 d3dcompiler_43 dotnet35 dotnet40 secur32 win7 directx9 gdiplus xact wininet devenum ie8"
+      TRICKS: "vcrun2010 d3dx9_36 d3dx11_43 d3dcompiler_43 dotnet35 dotnet40 secur32 win7 directx9 gdiplus xact wininet devenum ie8 mscoree"
       INSTALL_URL: "http://cds.q6u4m8x5.hwcdn.net/Installs/InstallPaladins.exe"
       LC_ALL: "C.UTF-8"
     plugs:
