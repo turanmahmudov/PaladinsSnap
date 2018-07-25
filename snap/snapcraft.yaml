@@ -20,7 +20,7 @@ apps:
     environment: 
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
       DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
-      TRICKS: "fontsmooth=rgb d3dx10 d3dx11_43 d3dx9_43 directx9 dotnet40 gdiplus vcrun2008 vcrun2010 xact wininet devenum IE8 wininet"
+      TRICKS: "d3dx10 d3dx11_43 d3dx9_43 directx9 dotnet40 gdiplus vcrun2008 vcrun2010 xact wininet devenum ie8"
       INSTALL_URL: "http://cds.q6u4m8x5.hwcdn.net/Installs/InstallPaladins.exe"
       LC_ALL: "C.UTF-8"
     plugs:
@@ -98,9 +98,9 @@ parts:
     override-build: |
       snapcraftctl build
 
-      WINE_REL="wine-staging"
+      WINE_REL="wine-stable"
       WINE_ARCH="i386"
-      WINE_VER="3.13.0"
+      WINE_VER="3.0.2"
 
       # wget and dpkg extract the wine debs
       DEB_URLS="https://dl.winehq.org/wine-builds/ubuntu/pool/main/${WINE_REL}-${WINE_ARCH}_${WINE_VER}~xenial_${WINE_ARCH}.deb \
