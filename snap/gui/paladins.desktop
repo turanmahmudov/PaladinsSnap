@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Paladins
+Exec=paladins
+Icon=${SNAP}/meta/gui/paladins.png
+Categories=Game;
+Terminal=false
+StartupNotify=true
+Path=${SNAP_USER_COMMON}/.wine/drive_c/Program Files/Hi-Rez Studios
+StartupWMClass=hirezlauncherui.exe
+Keywords=game
