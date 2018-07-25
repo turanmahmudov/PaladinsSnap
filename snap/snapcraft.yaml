@@ -7,8 +7,8 @@ description: |
   Through a unique collectible card system, players can amplify 
   and augment a character’s core set of abilities to play exactly how they want to play.
 
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slotsrchitectures:
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slotsrchitectures:
 
 architectures:
   - build-on: amd64
@@ -20,6 +20,7 @@ apps:
     environment: 
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
       DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
+      TRICKS: "fontsmooth=rgb gdiplus vcrun2008"
       INSTALL_URL: "http://cds.q6u4m8x5.hwcdn.net/Installs/InstallPaladins.exe"
       LC_ALL: "C.UTF-8"
     plugs:

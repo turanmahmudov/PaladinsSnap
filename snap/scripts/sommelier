@@ -2,7 +2,7 @@
 
 TITLE="Paladins"
 NOTICE="This snap is experimental please visit https://github.com/turanmahmudov/PaladinsSnap for details."
-WINE_ARGS="-SkipBuildPatchPrereq -OpenGL -no-cef-sandbox"
+WINE_ARGS="-SkipBuildPatchPrereq -no-cef-sandbox"
 
 function install_app() {
   # Install additional requirements via winetricks here
