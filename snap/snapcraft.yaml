@@ -20,7 +20,7 @@ apps:
     environment: 
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
       DLLOVERRIDES: "mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
-      TRICKS: "vcrun2010 d3dx9_43 d3dx11_43 d3dcompiler_43 dotnet462 secur32 gdiplus xact wininet winhttp devenum ie8"
+      TRICKS: "vcrun2010 vcrun2012 flash d3dx9_43 d3dx11_43 d3dcompiler_43 dotnet462 secur32 gdiplus xact wininet winhttp devenum ie8"
       INSTALL_URL: "http://cds.q6u4m8x5.hwcdn.net/Installs/InstallPaladins.exe"
       LC_ALL: "C.UTF-8"
     plugs:
@@ -40,7 +40,7 @@ apps:
     command: bin/sommelier $SNAP/bin/wineboot
     environment:
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
-      DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
+      DLLOVERRIDES: "mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
     plugs:
       - desktop
       - desktop-legacy
@@ -51,7 +51,7 @@ apps:
     command: bin/sommelier $SNAP/bin/winecfg
     environment:
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
-      DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
+      DLLOVERRIDES: "mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
     plugs:
       - desktop
       - desktop-legacy
@@ -62,7 +62,7 @@ apps:
     command: bin/sommelier $SNAP/bin/winetricks prefix="$WINEPREFIX"
     environment:
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
-      DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
+      DLLOVERRIDES: "mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
       LC_ALL: "C.UTF-8"
     plugs:
       - desktop

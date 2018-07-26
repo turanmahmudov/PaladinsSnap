@@ -2,13 +2,13 @@
 
 TITLE="Paladins"
 NOTICE="This snap is experimental please visit https://github.com/turanmahmudov/PaladinsSnap for details."
-WINE_ARGS="-SkipBuildPatchPrereq -no-cef-sandbox"
+WINE_ARGS="-no-cef-sandbox"
 
 function install_app() {
   # Install additional requirements via winetricks here
   if [ -n "${TRICKS}" ]; then
     for TRICK in ${TRICKS}; do
-      env WINEARCH="${WINEARCH}" WINEPREFIX="${WINEPREFIX}" "${WINETRICKS}" --gui --unattended ${TRICK}
+      env WINEARCH="${WINEARCH}" WINEPREFIX="${WINEPREFIX}" "${WINETRICKS}" --gui ${TRICK}
     done
   fi
 
