@@ -19,8 +19,9 @@ apps:
     command: bin/sommelier "$WINEPREFIX/drive_c/users/Public/Desktop/Paladins.lnk"
     environment: 
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
-      DLLOVERRIDES: "mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
-      TRICKS: "vcrun2010 d3dx9_36 d3dx11_43 d3dcompiler_43 dotnet35 dotnet40 secur32 win7 directx9 gdiplus xact wininet devenum ie8"
+      DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
+      TRICKS: "vcrun2010 d3dx9_43 d3dx11_43 d3dcompiler_43 dotnet462 secur32 gdiplus xact wininet winhttp devenum ie8"
+      TRICKS: ""
       INSTALL_URL: "http://cds.q6u4m8x5.hwcdn.net/Installs/InstallPaladins.exe"
       LC_ALL: "C.UTF-8"
     plugs:
